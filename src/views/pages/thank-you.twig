@@ -13,26 +13,26 @@
 
 {% block content %}
     {% hook 'thank-you:start' %}
-    <div class="h-52 -mb-52 w-full bg-primary rtl:right-0 ltr:left-0 relative -z-1">
-        <svg class="text-primary absolute top-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path class="fill-current" fill-opacity="1"
-                  d="M0,96L120,112C240,128,480,160,720,165.3C960,171,1200,149,1320,138.7L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="container mb-20">
-        <nav class="w-full py-5">
-            <ol class="list-reset flex items-center text-sm text-primary-reverse">
-                <li><a href="{{ link('/') }}" class="fix-align text-primary-reverse">{{ trans('common.titles.home') }}</a></li>
-                <li><i class="sicon-keyboard_arrow_left mx-2"></i></li>
-                <li><span class="fix-align">{{ thank_you_title }}</span></li>
-            </ol>
-        </nav>
-        <div class="bg-white p-4 md:p-8 rounded-md mb-6 md:mb-8">
-            <div class="flex flex-col items-center pt-16 pb-10">
-                <div class="rtl:-scale-x-100">
-                  <img src="{{ 'images/delivery-bro.svg' | asset }}" alt="{{ thank_you_title }}"
+
+    <section class=" w-full bg-white shadow-sm h-auto mb-5 pb-5 text-center flex flex-col ">
+
+        <span class="sicon-minus text-5xl text-slate-500 opacity-10 "></span>
+        <h2 class=" text-3xl">{{ thank_you_title }}</h2>
+
+    </section>
+
+    <section class="lg:container lg:px-5  w-[95%] md:w-[95%]  mx-auto bg-white h-auto mb-5 rounded-xl shadow-sm  p-5 ">
+       
+        <a href="{{ link('/') }}" class="text-lg hover:text-cyan-700 duration-700 ease-in-out ">{{ trans('common.titles.home') }}</a>
+        <div class=" w-full bg-white shadow-sm text-center flex flex-col h-2"></div>
+
+
+        <!-- salla -->
+            <div class="flex flex-col items-center pt-5 pb-10">
+                
+                  <img src="{{ 'images/thanks.gif' | asset }}" alt="{{ thank_you_title }}"
                      class="thanks-item opacity-0 w-40 mb-8">
-                </div>
+                
                 <h1 class="font-bold text-lg mb-2.5 thanks-item opacity-0">{{ thank_you_title }}</h1>
                 <p class="thanks-item opacity-0 text-gray-500 max-w-xs text-center text-sm leading-6 mb-6">
                     {{ trans('pages.thank_you.order_id') }}
@@ -41,8 +41,7 @@
                         <i class="copy-icon sicon-swap-stroke pointer-events-none rtl:mr-1 ltr:ml-1"></i>
                     </salla-button>
                 </p>
-                <salla-button onclick="salla.order.show({order_id:{{ order.id }}, url:'{{ order.url }}'})">
-                  <i class="sicon-newspaper rtl:ml-1 ltr:mr-1"></i>
+                <salla-button onclick="salla.order.show({order_id:{{ order.id }}, url:'{{ order.url }}'})"  class="!text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium  !rounded-full !border-none text-sm text-center ">
                   {{ trans('pages.thank_you.order_details') }}
                 </salla-button>
             </div>
@@ -106,7 +105,34 @@
             {% endfor %}
 
             {% hook 'thank-you:items.end' %}
-        </div>
+        
+
+
+    </section>
+
+
+
+
+
+<!-- 
+   
+    <div class="h-52 -mb-52 w-full bg-primary rtl:right-0 ltr:left-0 relative -z-1">
+        <svg class="text-primary absolute top-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path class="fill-current" fill-opacity="1"
+                  d="M0,96L120,112C240,128,480,160,720,165.3C960,171,1200,149,1320,138.7L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+        </svg>
+    </div>
+    <div class="container mb-20">
+        <nav class="w-full py-5">
+            <ol class="list-reset flex items-center text-sm text-primary-reverse">
+                <li><a href="{{ link('/') }}" class="fix-align text-primary-reverse">{{ trans('common.titles.home') }}</a></li>
+                <li><i class="sicon-keyboard_arrow_left mx-2"></i></li>
+                <li><span class="fix-align">{{ thank_you_title }}</span></li>
+            </ol>
+        </nav>
+
+-->
+ 
 
         <div class="lg:flex rtl:space-x-reverse lg:space-x-8">
             {% if order.email_sent %}
@@ -161,7 +187,14 @@
         </div>
         {% hook 'thank-you:end' %}
     </div>
+   
+    <!-- my test here-->
+
+    
+
 {% endblock %}
+
+
 
 {% block scripts %}
     <script defer src="{{ 'checkout.js' | asset }}"></script>
