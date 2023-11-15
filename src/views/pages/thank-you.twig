@@ -45,7 +45,7 @@
                   {{ trans('pages.thank_you.order_details') }}
                 </salla-button>
             </div>
-updsted
+
             {% if order.instructions %}
                 <article class="article article--main article--small text-center">
                     {{ order.instructions|raw }}
@@ -57,6 +57,8 @@ updsted
                     <span class="font-bold">{{ message }}</span>
                 </div>
             {% endfor %}
+
+            
 
             {% hook 'thank-you:items.start' %}
 
