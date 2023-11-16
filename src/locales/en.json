@@ -3,5 +3,8 @@
     "header": {
       "cart": "Cart"
     }
+  },
+  "thanks":{
+    "email_fill":"Complete your data"
   }
 }

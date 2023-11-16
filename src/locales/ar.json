@@ -3,5 +3,8 @@
     "header": {
       "cart": "السلة"
     }
+  },
+  "thanks":{
+    "email_fill":"أكمل بيانتك"
   }
 }
