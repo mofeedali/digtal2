@@ -13,7 +13,8 @@
     "prod": "webpack --mode production",
     "development": "webpack --mode development",
     "watch": "webpack --mode development --watch",
-    "devserver": "live-server --browser=Firefox"
+    "devserver": "live-server --browser=Firefox",
+    "start": "set \"BROWSER=firefox\" && ng serve --open"
   },
   "author": "Salla",
   "dependencies": {
