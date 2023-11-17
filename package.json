@@ -48,5 +48,11 @@
     "tailwindcss": "^3.3.3",
     "webpack": "^5.64.1",
     "webpack-cli": "^5.0.1"
-  }
+  },
+  "scripts": {
+    "start": "BROWSER=firefox react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+    }
 }
