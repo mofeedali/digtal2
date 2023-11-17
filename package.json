@@ -13,10 +13,7 @@
     "prod": "webpack --mode production",
     "development": "webpack --mode development",
     "watch": "webpack --mode development --watch",
-    "start": "BROWSER='/Applications/firefox.app' react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "devserver": "live-server --browser=firefox"
   },
   "author": "Salla",
   "dependencies": {
