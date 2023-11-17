@@ -164,10 +164,15 @@
             <p class="text-2xl font-bold  text-center">{{ trans('common.titles.support') }}</p>
 
 
-            <div class="w-10 p-4">
-                <div class="bg-gray-50 rounded-lg py-12">
-                    <i class="sicon-whatsapp text-lg h-6 mx-auto"></i>
+          
+                <div class=" flex gap-2 mt-2">
+                    <a href="{{ store.contacts.whatsapp }}" class=" bg-slate-600 hover:bg-slate-500 transition-all duration-1000  p-3 rounded-md sicon-whatsapp text-2xl text-sky-400 "></a>
+                    <a href="tel:{{ store.contacts.mobile }}" class=" bg-slate-600 hover:bg-slate-500 transition-all duration-1000  p-3 rounded-md sicon-phone text-2xl text-sky-400"></a>
+                    <a href="mailto:{{ store.contacts.email }}" class=" bg-slate-600 hover:bg-slate-500 transition-all duration-1000  p-3 rounded-md sicon-mail text-2xl text-sky-400"></a>
+                    <a href="{{ store.contacts.telegram }}" class=" bg-slate-600 hover:bg-slate-500 transition-all duration-1000  p-3 rounded-md text-sky-400 text-2xl sicon-paper-plane-o"></a>
+
                 </div>
+
         
         </div>
         
@@ -176,11 +181,7 @@
     </div>
   </section>
 
-  {% if order.email_sent %}
 
-  <div>test</div>
-
-    {% endif %}
 
 
 
@@ -243,6 +244,27 @@
     </div>
    
     <!-- my test here-->
+
+    <div id="overlay" class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white p-8">
+          <!-- Overlay content goes here -->
+        </div>
+      </div>
+      
+      <style>
+        #overlay {
+          display: none;
+          will-change: contents;
+        filter: blur(1px);
+            perspective: 100;
+            transform: translate3d(0,0,0);
+            transform: translateZ(0);
+            will-change: transform;
+
+
+        }
+       
+      </style>
     
 
 {% endblock %}
@@ -251,5 +273,28 @@
 
 {% block scripts %}
     <script defer src="{{ 'checkout.js' | asset }}"></script>
+    <script>
+        const overlay = document.getElementById('overlay');
+        const body = document.body;
+      
+        function showOverlay() {
+          overlay.style.display = 'flex';
+        }
+      
+        function hideOverlay() {
+          overlay.style.display = 'none';
+        }
+      
+        function handleBodyClick(event) {
+          if (event.target === body) {
+            hideOverlay();
+          }
+        }
+      
+        // Example usage:
+        showOverlay(); // Show the overlay
+      
+        body.addEventListener('click', handleBodyClick);
+      </script>
 {% endblock %}
 
