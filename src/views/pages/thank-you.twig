@@ -245,27 +245,7 @@
    
     <!-- my test here-->
 
-    <div id="overlay" class="fixed inset-0 flex items-center justify-center z-50">
-        <div class="bg-white p-8">
-          <!-- Overlay content goes here -->
-        </div>
-      </div>
-      
-      <style>
-        #overlay {
-          display: none;
-          will-change: contents;
-        filter: blur(1px);
-            perspective: 100;
-            transform: translate3d(0,0,0);
-            transform: translateZ(0);
-            will-change: transform;
-
-
-        }
-       
-      </style>
-    
+   
 
 {% endblock %}
 
@@ -273,28 +253,5 @@
 
 {% block scripts %}
     <script defer src="{{ 'checkout.js' | asset }}"></script>
-    <script>
-        const overlay = document.getElementById('overlay');
-        const body = document.body;
-      
-        function showOverlay() {
-          overlay.style.display = 'flex';
-        }
-      
-        function hideOverlay() {
-          overlay.style.display = 'none';
-        }
-      
-        function handleBodyClick(event) {
-          if (event.target === body) {
-            hideOverlay();
-          }
-        }
-      
-        // Example usage:
-        showOverlay(); // Show the overlay
-      
-        body.addEventListener('click', handleBodyClick);
-      </script>
 {% endblock %}
 
