@@ -284,7 +284,7 @@ class ProductCard extends HTMLElement {
                   id="card-wishlist-btn-${this.product.id}-horizontal"
                   aria-label="Add or remove to wishlist"
                   class="s-product-card-wishlist-btn animated"
-                  onclick="salla.wishlist.toggle(${this.product.id})"
+                  onclick="salla.wishlist.toggle(${this.product.id});alert('test');"
                   data-id="${this.product.id}">
                   <i class="sicon-heart"></i> 
                 </salla-button>`

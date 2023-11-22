@@ -1,7 +1,8 @@
 {
   "blocks": {
     "header": {
-      "cart": "Cart"
+      "cart": "Cart",
+      "login": "Login"
     }
   },
   "thanks":{

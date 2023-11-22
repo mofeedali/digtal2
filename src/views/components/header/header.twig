@@ -74,13 +74,17 @@
                           <salla-user-menu avatar-only show-header></salla-user-menu>
                          
                         {% else %}
-                            <button class="header-btn" onclick="salla.event.dispatch('login::open')">
+                            <button class="invisible lg:visible md:visible header-btn font-bold h-10 px-4 rounded-full  bg-blue-600 text-white hover:bg-blue-500 transition-all ease-in-out duration-1000 " onclick="salla.event.dispatch('login::open')">
                              {# <i class="header-btn__icon sicon-user-circle"></i> #}
+                             {{trans('blocks.header.login')}}
                             </button>
                         {% endif %}
+                        
                         <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
-                         <i slot="icon" class="header-btn__icon icon sicon-shopping-bag"></i> 
+                         <i slot="icon" class=" sicon-shopping-bag"> السلة</i> 
                         </salla-cart-summary>
+                        
+                        <div class="ml-4 rtl:ml-[unset] rtl:mr-4" slot="icon">{{cart.items_count}}</div>
                     </div>
                 </div>
             </div>

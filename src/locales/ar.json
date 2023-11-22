@@ -1,7 +1,8 @@
 {
   "blocks": {
     "header": {
-      "cart": "السلة"
+      "cart": "السلة",
+      "login": "تسجيل الدخول"
     }
   },
   "thanks":{
