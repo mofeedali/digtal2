@@ -81,7 +81,7 @@
                         {% endif %}
                         
                         <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
-                         <i slot="icon" class=" sicon-shopping-bag"> السلة</i> 
+                         <i slot="icon" id="sallaNumber" class=" sicon-shopping-bag"></i> 
                         </salla-cart-summary>
                         
                         <div class="ml-4 rtl:ml-[unset] rtl:mr-4" slot="icon">{{cart.items_count}}</div>
@@ -94,3 +94,17 @@
 {% if store.scope %}
     <salla-scopes selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
 {% endif %}
+
+{% block scripts %}
+    <script>
+    function updatemysalla(){
+
+        salla.cart.details().then((response) => {
+  /* add your code here */
+            console.log('mofeed');
+  console.log(response);
+});
+
+    }
+    </script>
+{% endblock %}

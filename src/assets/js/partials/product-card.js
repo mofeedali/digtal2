@@ -266,7 +266,7 @@ class ProductCard extends HTMLElement {
 
           ${!this.hideAddBtn ?
             `<div class="s-product-card-content-footer gap-2">
-              <salla-add-product-button fill="outline" width="wide"
+              <salla-add-product-button onclick="updatemysalla();" fill="outline" width="wide"
                 product-id="${this.product.id}"
                 product-status="${this.product.status}"
                 product-type="${this.product.type}">
@@ -284,7 +284,7 @@ class ProductCard extends HTMLElement {
                   id="card-wishlist-btn-${this.product.id}-horizontal"
                   aria-label="Add or remove to wishlist"
                   class="s-product-card-wishlist-btn animated"
-                  onclick="salla.wishlist.toggle(${this.product.id});alert('test');"
+                  onclick="salla.wishlist.toggle(${this.product.id});"
                   data-id="${this.product.id}">
                   <i class="sicon-heart"></i> 
                 </salla-button>`
