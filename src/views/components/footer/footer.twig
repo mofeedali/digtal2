@@ -61,9 +61,12 @@
     <hr class="container mx-auto border-gray-200 border-t-2">
   </div>
        
-  <div class="md:flex items-center justify-between py-4 container text-center">
-    <img class=" w-24 h-auto" src="{{store.logo}}" alt="">
-    <span class="text-sm opacity-75">{% hook copyright %}</span>
+  <div class="md:flex items-center  justify-between  py-4 container text-center">
+    <div class="flex justify-center ">
+      <img class=" w-24 h-auto py-2" src="{{store.logo}}" alt="">
+    </div>
+    
+    <span class="text-sm text-slate-600 opacity-75">{% hook copyright %}</span>
     {% component 'footer.payment-methods' %}
   </div>
 
