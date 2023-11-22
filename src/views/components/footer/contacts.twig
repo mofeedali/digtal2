@@ -23,12 +23,20 @@
         {% endfor %}
     </div> 
 {% else %}
-    <div>
-        <h3>{{ trans('blocks.footer.social') }}</h3>
-        <div class="flex flex-row flex-shrink-0 items-center leading-none justify-center">
+    <div class=" text-center">
+        {#
+            <div class="flex items-center mt-28 mx-10">
+            <div class="border-t-[0.2px] border-gray-400 flex-grow lg:border-none"></div>
+            <div class="px-3 text-gray-800 font-bold text-2xl"> <h3>{{ trans('blocks.footer.social') }}</h3></div>
+            <div class="border-t-[0.2px]  border-gray-400 flex-grow lg:border-none"></div>
+         #}
+            <h3>{{ trans('blocks.footer.social') }}</h3>
+        </div>
+     
+        <div class="flex flex-row leading-none justify-center">
         {% for contact in contacts %}
             <a href="{{ contact.url }}" class="mb-4 last:mb-0  text-sm ">
-                <i class="rtl:ml-2.5 ltr:mr-2.5 border rounded-lg  w-10 h-10  shrink-0 {{ contact.icon }} "></i>
+                <i class="rtl:ml-2.5 ltr:mr-2.5  border-[0.8px] rounded-lg p-6  w-12 h-12 justify-center flex items-center shrink-0 ease-in-out duration-1000 hover:bg-slate-400 hover:text-white {{ contact.icon }} "></i>
                <!-- <span class="text-unicode unicode">{{ contact.value }}</span> -->
             </a>
         {% endfor %}
