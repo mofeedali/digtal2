@@ -8,7 +8,8 @@
 {% set important_links = theme.settings.get('important_links') %}
 <header class="store-header">
     {# Top Nav #}
-    <div class="top-navbar">
+ 
+    <div class="top-navbar hidden">
         <div class="container flex justify-between">
             <div class="flex-1 flex items-center rtl:space-x-reverse space-x-2">
               {# Footer Menu #}
@@ -50,9 +51,12 @@
         </div>
     </div>
 
+ 
+    
+
     {# Main Nav #}
-    <div id="mainnav" class="main-nav-container shadow-default bg-white bg-opacity-80 backdrop-blur[5px] ">
-        <div class="inner bg-inherit">
+    <div id="mainnav" class="main-nav-container shadow-default bg-white bg-opacity-70 " >
+        <div class="inner bg-inherit backdrop-blur">
             <div class="container">
                 <div class="flex items-stretch justify-between relative">
                     <div class="flex items-center">
@@ -74,17 +78,37 @@
                           <salla-user-menu avatar-only show-header></salla-user-menu>
                          
                         {% else %}
-                            <button class="invisible lg:visible md:visible header-btn font-bold h-10 px-4 rounded-full  bg-blue-600 text-white hover:bg-blue-500 transition-all ease-in-out duration-1000 " onclick="salla.event.dispatch('login::open')">
+                            <button class="invisible lg:visible md:visible header-btn font-bold h-10 px-4 rounded-lg  bg-blue-600 text-white hover:bg-blue-500 transition-all ease-in-out duration-1000 " onclick="salla.event.dispatch('login::open')">
                              {# <i class="header-btn__icon sicon-user-circle"></i> #}
                              {{trans('blocks.header.login')}}
                             </button>
                         {% endif %}
                         
-                        <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
-                         <i slot="icon" id="sallaNumber" class=" sicon-shopping-bag"></i> 
+                      {#  <salla-cart-summary class="ml-4 rtl:ml-[unset] rtl:mr-4">
+                         <i slot="icon"  class=" sicon-shopping-bag"></i> 
                         </salla-cart-summary>
+                        #}
                         
-                        <div class="ml-4 rtl:ml-[unset] rtl:mr-4" slot="icon">{{cart.items_count}}</div>
+                        <div class=" flex flex-row">
+
+                        {# my code for budge#}
+
+
+                            <button type="button" class="ml-1 rtl:ml-[unset] rtl:mr-1 relative inline-flex items-center p-3  font-medium text-center text-blue rounded-lg  focus:ring-4 focus:outline-none text-xl hover:text-sky-600 sicon-shopping-bag" onclick="location.href = '{{store.url}}'+'/cart';">
+                            <div id="sallaNumber" class="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-[0.5px] -end-[0.5px] dark:border-gray-900">{{cart.items_count}}</div>
+                            </button>
+                            
+
+
+                        {% if store.settings.is_multilingual or store.settings.currencies_enabled %}
+                        <div class="flex flex-row  py-3 items-center justify-center gap-1">
+                        <span class="flag iti__flag iti__{{ user.language.country_code }} rounded-sm"></span> <div class="font-bold text-black hover:text-slate-500 cursor-pointer" onclick="salla.event.dispatch('localization::open');">{{trans('blocks.header.lang')}}</div>
+                        </div>
+                        {% endif %}
+                        </div>
+                        
+
+
                     </div>
                 </div>
             </div>
@@ -97,14 +121,13 @@
 
 {% block scripts %}
     <script>
-    function updatemysalla(){
+             function updatemysalla(){
 
-        salla.cart.details().then((response) => {
-  /* add your code here */
-            console.log('mofeed');
-  console.log(response);
-});
+                salla.cart.details().then((response) => {
+                document.getElementById('sallaNumber').innerHTML = response['data']['cart']['count'] ;
+        
+                });
 
-    }
+              }
     </script>
 {% endblock %}
