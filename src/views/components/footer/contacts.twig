@@ -25,10 +25,10 @@
 {% else %}
     <div>
         <h3>{{ trans('blocks.footer.social') }}</h3>
-        <div class="flex flex-row items-center leading-none justify-center">
+        <div class="flex flex-row flex-shrink-0 items-center leading-none justify-center">
         {% for contact in contacts %}
             <a href="{{ contact.url }}" class="mb-4 last:mb-0  text-sm ">
-                <i class="rtl:ml-2.5 ltr:mr-2.5 border rounded-lg p-7 w-10 h-10 justify-center flex items-center shrink-0 {{ contact.icon }} "></i>
+                <i class="rtl:ml-2.5 ltr:mr-2.5 border rounded-lg  w-10 h-10  shrink-0 {{ contact.icon }} "></i>
                <!-- <span class="text-unicode unicode">{{ contact.value }}</span> -->
             </a>
         {% endfor %}
