@@ -1,5 +1,5 @@
 {# MOBILE #}
-<li class="lg:hidden text-sm font-bold" {{ menu.attrs }}>
+<li class="sm:hidden text-sm font-bold" {{ menu.attrs }}>
     {% set item_image %}
       {% if menu.image %}
         <img src="{{ menu.image }}" class="rounded-full" width="48" height="48" alt="{{ menu.title }}"/>  
@@ -24,6 +24,7 @@
       </ul>
     {% endif %}
 </li>
+
 
 {# DESKTOP #}
 <li class="!hidden lg:!block {{ is_root_menu?'root-level lg:!inline-block':'relative' }}
