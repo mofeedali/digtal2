@@ -6325,3 +6325,19 @@ button.swiper-pagination-bullet {
 .xs\:text-sm{font-size:0.875rem;line-height:1.25rem}
 [dir="ltr"] .ltr\:xs\:right-5{right:1.25rem}
 [dir="rtl"] .rtl\:xs\:left-5{left:1.25rem}}
+.to-top a:hover .icon{
+  animation:toTopFromBottom .3s
+}
+
+@keyframes toTopFromBottom{
+  49%{
+      transform:translateY(-100%)
+  }
+  50%{
+      opacity:0;
+      transform:translateY(100%)
+  }
+  51%{
+      opacity:1
+  }
+}
