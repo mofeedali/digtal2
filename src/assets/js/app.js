@@ -113,7 +113,7 @@ class App extends AppHelpers {
     if (!menu) {
       return;
     }
-    menu = new MobileMenu(menu, "(max-width: 1024px)", "( slidingSubmenus: false)");
+    menu = new MobileMenu(menu, "(max-width: 55555px)", "( slidingSubmenus: false)");
     salla.lang.onLoaded(() => {
       menu.navigation({title: salla.lang.get('blocks.header.main_menu')});
     });
