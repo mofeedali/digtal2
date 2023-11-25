@@ -69,6 +69,7 @@
   .has-bg &,
   .has-bg & .sub-menu{
     @apply bg-[color:var(--mainnav-bg)];
+   
   }
 
   // Custom text color
@@ -91,6 +92,7 @@
 
 /* Sticky Header */
 .main-nav-container {
+  
   &.animated {
     .inner {
       transition: top 0.5s, transform 0.5s, -webkit-transform 0.5s, opacity 0.4s;
@@ -125,6 +127,7 @@
     }
 
     .main-menu > li > a {
+      
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -132,6 +135,7 @@
 
   &.fixed-header {
     .inner {
+      
       transform: translate3d(0, 0, 0);
 
       @media (max-width: 1024px){
