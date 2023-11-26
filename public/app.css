@@ -3780,7 +3780,7 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 /* Sticky Header */
 .main-nav-container.animated .inner {
   transition: top 0.5s, transform 0.5s, opacity 0.4s;
-  backdrop-filter: var(--tw-blur);
+  
 }
 .main-nav-container.fixed-pinned .inner {
   position: fixed;
@@ -3791,6 +3791,7 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
   z-index: 29;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -100%, 0);
+  backdrop-filter: blur(10px);
 }
 @media (max-width: 1024px) {
   .main-nav-container.fixed-pinned .inner {
