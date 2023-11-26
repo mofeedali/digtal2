@@ -3793,8 +3793,13 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
   z-index: 9999;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -100%, 0);
-  backdrop-filter: blur(10px);
+
   
+}
+.inner {
+
+  backdrop-filter: blur(10px);
+
 }
 @media (max-width: 1024px) {
   .main-nav-container.fixed-pinned .inner {
