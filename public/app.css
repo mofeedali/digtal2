@@ -3765,6 +3765,8 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 [dir="rtl"] .topnav-link-item.right-side:first-child{padding-right:0px}
 /* Main Nav */
 .main-nav-container{
+  position: fixed;
+  z-index: 2;
   min-height:auto;}
 @media (min-width: 640px){
 .main-nav-container{min-height:auto;}}
