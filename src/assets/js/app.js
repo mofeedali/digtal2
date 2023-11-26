@@ -142,7 +142,7 @@ class App extends AppHelpers {
 
     window.addEventListener('scroll', () => {
       window.scrollY >= header.offsetTop + height ? header.classList.add('fixed-pinned', 'animated') : header.classList.remove('fixed-pinned');
-      window.scrollY >= 200 ? header.classList.add('fixed-header') : header.classList.remove('fixed-header', 'animated');
+      window.scrollY >= 500 ? header.classList.add('fixed-header') : header.classList.remove('fixed-header', 'animated');
     }, {passive: true});
   }
 
