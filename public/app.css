@@ -3801,7 +3801,7 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 }
 .mofeedali{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
 
 
