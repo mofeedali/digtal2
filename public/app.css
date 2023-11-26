@@ -3764,7 +3764,10 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
 [dir="ltr"] .topnav-link-item.right-side:first-child{padding-left:0px}
 [dir="rtl"] .topnav-link-item.right-side:first-child{padding-right:0px}
 /* Main Nav */
-.main-nav-container{min-height:auto;}
+.main-nav-container{
+  position: relative;
+  z-index: 2;
+  min-height:auto;}
 @media (min-width: 640px){
 .main-nav-container{min-height:auto;}}
 @media (min-width: 768px){
@@ -3783,12 +3786,13 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
   
 }
 .main-nav-container.fixed-pinned .inner {
-  position: relative;
+  backdrop-filter: blur(10px);
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 29;
+  z-index: 2;
   
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transform: translate3d(0, -100%, 0);
