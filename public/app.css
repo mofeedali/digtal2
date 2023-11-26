@@ -2795,7 +2795,7 @@ salla-user-menu div[slot='trigger']{display:none}
 .s-user-menu-toggler.opened .s-user-menu-dropdown .tooltip-content {
   visibility: visible;
   opacity: 1;
-  transform: translate(82px, -110px);
+  transform: translate(82px, 0px);
 }
 .s-user-menu-trigger-avatar{display:inline-block;height:2.5rem;width:2.5rem;border-radius:9999px;border-width:1px;--tw-border-opacity:1;border-color:rgba(229, 231, 235, 1);border-color:rgba(229, 231, 235, var(--tw-border-opacity));-o-object-fit:cover;object-fit:cover}
 .s-user-menu-trigger-content{margin-left:0.5rem;margin-right:0.25rem}
