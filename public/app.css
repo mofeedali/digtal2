@@ -3801,9 +3801,7 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
   z-index: 0;
 
 }
-.main-nav-container{
-  z-index: 999;
-}
+
 @media (max-width: 1024px) {
   .main-nav-container.fixed-pinned .inner {
     transform: none;
