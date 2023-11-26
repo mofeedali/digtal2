@@ -3798,10 +3798,10 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
  .inner {
 
   backdrop-filter: blur(10px);
-  z-index: -50;
+  z-index: 10;
 
 }
-.fixed-pinned{
+.main-nav-container{
   z-index: 0;
 }
 @media (max-width: 1024px) {
