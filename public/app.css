@@ -3783,7 +3783,7 @@ input[type=radio].sr-only:checked ~ div.radio-images__badge {
   
 }
 .main-nav-container.fixed-pinned .inner {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
