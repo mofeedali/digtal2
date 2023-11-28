@@ -32,6 +32,7 @@
       
       {# item start #}
       {% for menu_id, menu in menus %}
+      <div> <img src="{{menu.image}}" onerror="alert();" alt=""> test</div>
         <a class="flex items-center w-full hover:opacity-60 lg:text-sm bg-white bg-opacity-70" href="{{menu.url}}">
           <div class="bg-neutral-30 rounded-md p-3 mie-3">
             <svg width="24" height="24" fill="none" color="#1C4EF2" viewBox="0 0 24 24">
