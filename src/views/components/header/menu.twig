@@ -10,7 +10,7 @@
 | menus[].children     | Menu[] *Collection     |                                                    |
 | menus[].products     | ?Product[] *Collection | List of selected products or null                  |
 #}
-
+{#
 <nav id="mobile-menu" class="mobile-menu">
     <ul class="main-menu">
         {% for menu_id, menu in menus %}
@@ -21,3 +21,39 @@
 </nav>
 <button class="btn--close-sm close-mobile-menu sicon-cancel !hidden"></button>
 
+
+{% for menu_id, menu in menus %}
+<div ><a href="{{menu.url}}">test</a></div>
+{% endfor %}
+#}
+<div class="relative transform overflow-hidden rounded-lg px-4 pt-5 pb-4 text-left transition-all sm:my-8 w-full sm:max-w-lg md:max-w-2xl lg:max-w-4xl sm:p-6 scale-100 opacity-100 translate-y-0 sm:scale-100" id="headlessui-dialog-panel-:r3:" data-headlessui-state="open">
+    <div class="lg:p-5">
+      <div class="grid gap-y-1 gap-x-2 lg:gap-10 lg:space-x-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-2 max-h-[89vh] overflow-y-auto overflow-x-hidden text-start">
+      
+      {# item start #}
+      {% for menu_id, menu in menus %}
+        <a class="flex items-center w-full hover:opacity-60 lg:text-sm bg-white bg-opacity-70" href="{{menu.url}}">
+          <div class="bg-neutral-30 rounded-md p-3 mie-3">
+            <svg width="24" height="24" fill="none" color="#1C4EF2" viewBox="0 0 24 24">
+              <path d="M18 15v4c0 1.65-1.35 3-3 3H9c-1.65 0-3-1.35-3-3v-5.02l3.89.02c.73 0 1.45.17 2.11.5.66.33 1.38.5 2.12.5H18Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path opacity="0.4" d="M18 10.83V15h-3.88c-.74 0-1.46-.17-2.12-.5a4.71 4.71 0 0 0-2.11-.5L6 13.98v-3.15c0-.46.26-1.09.59-1.42l2.12-2.12c.18-.18.29-.44.29-.7V5h6v1.59c0 .26.11.52.29.7l2.12 2.12c.33.33.59.96.59 1.42Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M18 16v-1M6 14.98v-1M14.5 5h-5C8.67 5 8 4.32 8 3.5S8.67 2 9.5 2h5c.83 0 1.5.68 1.5 1.5S15.33 5 14.5 5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="flex text-neutral-1000 text-start text-sm sm:text-base">{{menu.title}}</span>
+            <div class="">
+              <span class="text-xs text-neutral-600">تصفح البطاقات</span>
+              <svg class="inline" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M7.49992 9.95906L4.23992 6.69906C3.85492 6.31406 3.85492 5.68406 4.23992 5.29906L7.49992 2.03906" stroke="#677076" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+              {# item end #}
+
+ 
+      </div>
+    </div>
+  </div>
