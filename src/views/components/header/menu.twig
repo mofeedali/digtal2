@@ -31,8 +31,12 @@
       <div class="grid gap-y-1 gap-x-2 lg:gap-10 lg:space-x-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-2 max-h-[89vh] overflow-y-auto overflow-x-hidden text-start">
       
       {# item start #}
+      
       {% for menu_id, menu in menus %}
-      <div> <img src="{{menu.image}}" onerror="alert();" alt=""> test</div>
+      <div> <img src="{{menu.icon}}" onerror="alert();" alt=""></div>
+      {% for ch in menu %}
+      <div>{{ ch }}</div>
+      {% endfor %}
         <a class="flex items-center w-full hover:opacity-60 lg:text-sm bg-white bg-opacity-70" href="{{menu.url}}">
           <div class="bg-neutral-30 rounded-md p-3 mie-3">
             <svg width="24" height="24" fill="none" color="#1C4EF2" viewBox="0 0 24 24">
