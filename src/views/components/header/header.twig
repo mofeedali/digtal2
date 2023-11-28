@@ -6,6 +6,90 @@
 | cart.total       | string  | Formatted total ex: "١٠٠ ر.س"   |
 #}
 {% set important_links = theme.settings.get('important_links') %}
+
+<nav class="sticky top-0 z-20 backdrop-blur shadow-lg bg-opacity-60 bg-white" data-headlessui-state="">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 z-1">
+      <div class="flex items-center justify-between h-20 text-sm text-neutral-700">
+        <div class="flex items-center">
+          <div class="flex items-center lg:hidden">
+            <div class="lg:hidden text-base" data-headlessui-state="">
+              <button class="hover:opacity-60" type="button" aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:Raadj6:">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+            <div style="position:fixed;top:1px;left:1px;width:1px;height:0;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none"></div>
+          </div>
+          <a class="relative block shrink-0 mx-2 lg:mis-0" href="/">
+            <div>
+              <img alt="{{store.name}}" fetchpriority="high" width="95" height="26" decoding="async" data-nimg="1" class="max-w-full h-auto" style="color:transparent" src="{{store.logo}}">
+            </div>
+          </a>
+          <div class="hidden lg:block">
+            <div class="flex items-baseline px-3">
+              <div class="flex">
+                <a class="flex items-center px-1.5 lg:px-2 hover:opacity-60 text-primary-700 font-semibold" href="/">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.02 2.83821L3.63 7.03821C2.73 7.73821 2 9.22821 2 10.3582V17.7682C2 20.0882 3.89 21.9882 6.21 21.9882H17.79C20.11 21.9882 22 20.0882 22 17.7782V10.4982C22 9.28821 21.19 7.73821 20.2 7.04821L14.02 2.71821C12.62 1.73821 10.37 1.78821 9.02 2.83821Z"></path>
+                    <path opacity="0.34" d="M12 17.9883V14.9883"></path>
+                  </svg>
+                  <span class="hidden lg:block mis-2 ">الرئيسية</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="hover:opacity-60 group items-center pie-3 py-2 hidden lg:inline-flex">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <span class="mis-2">الأقسام</span>
+          </button>
+          <div class="hidden lg:inline-block m-2">
+            <div class="drop-shadow-[2px_0px_3px_rgba(0,0,0,0.1)] gap-x-2">
+                <salla-search inline oval height="36" ></salla-search>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center ">
+          <button class="hover:opacity-60 px-1.5 lg:hidden">
+            <svg width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"></path>
+              <path d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"></path>
+            </svg>
+          </button>
+          <div class="lg:px-2">
+            <a class="text-neutral-700 hover:opacity-70
+              max-w-xs flex items-center text-sm focus:outline-none px-1.5 lg:p-2 " id="cart-menu" aria-expanded="false" aria-haspopup="true" href="/cart">
+              <span class="sr-only">Open Cart Menu menu</span>
+              <div class="relative">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.5 7.67V6.7c0-2.25 1.81-4.46 4.06-4.67a4.5 4.5 0 0 1 4.94 4.48v1.38M9 22h6c4.02 0 4.74-1.61 4.95-3.57l.75-6C20.97 9.99 20.27 8 16 8H8c-4.27 0-4.97 1.99-4.7 4.43l.75 6C4.26 20.39 4.98 22 9 22Z"></path>
+                  <path d="M15.5 12h0m-7 0h0" stroke-width="2"></path>
+                </svg>
+              </div>
+              <span class="mis-2 hidden lg:block">السلة</span>
+            </a>
+          </div>
+          <div class="hidden lg:block">
+            <div class="flex items-center">
+              <div class="space-i-4">
+                <button class="inline-flex justify-center items-center font-semibold h-14 px-4 rounded-xl focus:outline-none bg-primary-700 text-white focus:bg-primary-900 disabled:bg-neutral-150">اشتراك</button>
+                <button class="inline-flex justify-center items-center font-semibold h-14 px-4 rounded-xl focus:outline-none border-primary-700 text-primary-700 border-solid border focus:bg-primary-30 disabled:border-neutral-300 disabled:text-neutral-300">تسجيل الدخول</button>
+              </div>
+              <div class="mis-2">
+                <a aria-label="Switch to English" hreflang="en" class="flex items-center inline-end-2 text-neutral-700 justify-between hover:opacity-60 py-3" href="/en">
+                  <span>English</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!--
 <header class="store-header">
     {# Top Nav #}
  
@@ -77,7 +161,7 @@
                     </div>
                     <div class="flex items-center justify-end">
                         {% if user.type=='user' %}
-                         <!--  <salla-user-menu avatar-only show-header></salla-user-menu> -->
+                         {#  <salla-user-menu avatar-only show-header></salla-user-menu> -->#}
                          <salla-user-menu avatar-only show-header></salla-user-menu>
 
                          
@@ -119,6 +203,7 @@
         </div>
     </div>
 </header>
+-->
 {% if store.scope %}
     <salla-scopes selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
 {% endif %}
