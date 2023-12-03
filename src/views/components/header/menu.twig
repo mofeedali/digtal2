@@ -35,7 +35,7 @@
       {% for menu_id, menu in menus %}
       <div> <img src="{{menu.icon}}" onerror="alert();" alt=""></div>
       {% for ch in menu %}
-      <div>{{ ch }}</div>
+      <div>{{ ch.image }}</div>
       {% endfor %}
         <a class="flex items-center w-full hover:opacity-60 lg:text-sm bg-white bg-opacity-70" href="{{menu.url}}">
           <div class="bg-neutral-30 rounded-md p-3 mie-3">
