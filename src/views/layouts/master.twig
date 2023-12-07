@@ -188,6 +188,9 @@
 {% hook 'body:end' %}
 <script defer src="{{ 'app.js' | asset }}"></script>
 <script src='https://d33wubrfki0l68.cloudfront.net/js/e76e8816353cc6fd6d4a1a2820fcf84327f92bd6/assets/js/wow.min.js'></script>
+      <script>
+       new WOW().init();
+     </script>
 
 {# Twilight Components #}
 <salla-offer-modal></salla-offer-modal>
