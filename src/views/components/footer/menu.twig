@@ -18,11 +18,11 @@
         </ul>
     {% endif %}
 {% else %}
-    <div class=" bg-black">
-        <h3>{{ trans('blocks.footer.pages_links') }}</h3>
-        <div class="footer-list {{ items|length > 4 ? 'store-links-items':'' }}">
+    <div class="">
+        <h3 class="text-center">{{ trans('blocks.footer.pages_links') }}</h3>
+        <div class=" grid grid-cols-2 gap-5 {{ items|length > 4 ? 'store-links-items':'' }}">
             {% for item in items %}
-                <a href="{{ item.url }}" target="{{ item.target }}" class="block mb-5 last:mb-0 text-sm leading-none">{{ item.title }}</a>
+                <a href="{{ item.url }}" target="{{ item.target }}" class="block  text-lg lg:text-sm rounded-sm p-1 text-white  bg-slate-800">{{ item.title }}</a>
             {% endfor %}
         </div>
     </div>

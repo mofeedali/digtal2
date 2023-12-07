@@ -33,7 +33,7 @@
             <h3>{{ trans('blocks.footer.social') }}</h3>
         </div>
      
-        <div class="flex flex-row  leading-none justify-center">
+        <div class="flex leading-none justify-center ">
         {% for contact in contacts %}
             <a href="{{ contact.url }}" class="mb-4 last:mb-0  text-sm ">
                 <i class="rtl:ml-2.5 ltr:mr-2.5  border-[0.8px] rounded-lg p-6  w-12 h-12 justify-center flex items-center shrink-0 ease-in-out duration-1000 hover:bg-slate-400 hover:text-white {{ contact.icon }} "></i>
@@ -43,3 +43,4 @@
         </div>
     </div>
 {% endif %}
+
